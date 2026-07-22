@@ -1,8 +1,41 @@
 # PM Training Agent
 
-一个用于产品经理训练与辅导的 AI Agent 项目。
+An AI coaching system for experienced Product Managers to strengthen product thinking through deliberate practice.
 
-## 项目结构
+## Project Overview
+
+PM Training Agent focuses on five capability areas:
+
+- Decision Making
+- Platform Thinking
+- Investment Thinking
+- Strategy Planning
+- Stakeholder Influence
+
+The goal is not to teach product knowledge. It is to help experienced Product Managers improve how they think, reason, and make decisions through deliberate practice.
+
+## Documentation
+
+- [Product Requirements](docs/PRD.md) — Source of truth for product scope and requirements.
+- [Coach Instruction](docs/Coach-Instruction.md) — Coaching behavior and interaction guidelines.
+
+## Development Principles
+
+- Documentation before implementation.
+- Product thinking over knowledge transfer.
+- Deliberate practice over passive learning.
+- No functionality outside the approved PRD.
+- Clear separation between product requirements and coaching instructions.
+
+## Development Workflow
+
+1. Define and approve requirements in `docs/PRD.md`.
+2. Align coaching behavior in `docs/Coach-Instruction.md`.
+3. Implement only the approved scope.
+4. Validate implementation against the documentation.
+5. Update documentation before changing product behavior.
+
+## Repository Structure
 
 ```text
 pm-training-agent/
@@ -12,11 +45,6 @@ pm-training-agent/
     └── Coach-Instruction.md
 ```
 
-## 文档说明
+## Current Status
 
-- `docs/PRD.md`：产品需求、目标用户、核心场景与功能范围。
-- `docs/Coach-Instruction.md`：PM Coach 的角色设定、辅导原则与交互规范。
-
-## 当前状态
-
-项目结构已初始化，后续可继续完善 PRD 和 Coach 指令。
+The project is in its initial documentation phase. Product requirements and coaching instructions are being defined before implementation begins.

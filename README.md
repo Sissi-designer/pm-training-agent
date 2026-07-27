@@ -14,6 +14,39 @@ PM Training Agent focuses on five capability areas:
 
 The goal is not to teach product knowledge. It is to help experienced Product Managers improve how they think, reason, and make decisions through deliberate practice.
 
+## Architecture
+
+The PM Training Agent is organized into three conceptual layers.
+
+### Knowledge Layer
+
+Defines what the agent knows.
+
+Examples:
+
+- PRD
+- Capability Framework
+
+### Reasoning Layer
+
+Defines how the agent thinks.
+
+Examples:
+
+- Diagnosis Framework
+- Coach Instruction
+- Evaluation Framework
+
+### Execution Layer
+
+Defines how the agent conducts training sessions.
+
+Examples:
+
+- Decision Gym
+- Strategy Lab
+- Reverse Engineering
+
 ## Documentation
 
 - [Product Requirements](docs/PRD.md) — Source of truth for product scope and requirements.

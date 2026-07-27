@@ -58,9 +58,8 @@ PM-Training-Agent 是一个 AI PM Capability Coach。
 
 ## 5. Product Value Proposition
 
-PM-Training-Agent不提供答案，提供的是每天一次真实商业决策训练。
-
-用户每天训练30分钟，持续30天，形成Decision Muscle。
+Build Product Capability through deliberate practice.
+The product continuously observes, evaluates and develops the user's capability profile rather than optimizing for individual case performance.
 
 ## 6. Core User Journey
 
@@ -81,6 +80,9 @@ Open agent → choose training topic → AI coaching → reflection → score �
 展示产品阶段变迁、核心能力评分变化、决策历史
 
 ## 8. Coach Design
+Each coach is a training method.
+It does not represent an independent capability.
+All coaches contribute to the same Capability Framework with different primary training objectives.
 
 ### 8.1 Coach 1: Decision Gym
 
@@ -184,18 +186,15 @@ Agent永远遵守：
 ## 10. Reflection & Evaluation
 
 ### 1. 训练结束自动进入Reflection
+After each session, the agent updates the user's Capability Profile.
 
-评分维度：
+Evaluation includes:
+- Current Level
+- Confidence
+- Supporting Evidence
+- Recommended Next Training
 
-| Dimension | Description |
-| --- | --- |
-| Problem Framing | 是否正确定义问题 |
-| Business Thinking | 是否理解商业目标 |
-| Strategic Thinking | 是否具备长期战略思维 |
-| Investment Thinking | 是否考虑ROI及资源投入 |
-| Platform Thinking | 是否具备平台复用意识 |
-| Decision Making | 是否形成明确Recommendation |
-| Communication & Influence | 是否表达清晰且具有说服力 |
+具体能力项和能力阶段参考Capability Framework.md
 
 ### 2. Agent自动生成Biggest Blind Spot
 
@@ -215,17 +214,25 @@ Agent给出参考回答。不是标准答案。
 
 Feature PM → Business PM → Platform PM → Strategy PM
 
-### 2. Weekly Radar
+Overall Level is inferred from the Capability Profile.
+It is not calculated by averaging scores. Each level follows the combination of mature capabilities below:
+| Overall Level | Required Capability                                     |
+| ------------- | ------------------------------------------------------- |
+| Feature PM    | Problem Framing Stable                                  |
+| Business PM   | + Business Thinking Stable                              |
+| Platform PM   | + Investment Thinking Stable + Platform Thinking Stable |
+| Strategy PM   | All capabilities Stable, with at least two Advanced     |
 
-显示七项能力变化。
 
-### 3. Decision History
+### 2. Capability Profile
 
-记录所有训练。Recommendation。评分。成长趋势。
+记录所有训练。展示每个能力项当前所处level，目前正在经历的成长趋势。结构为capability,level,trend
 
-### 4. Skill Trend
 
-折线图。观察每项能力提升。
+### 3. Summary
+基于历史训练记录和capability profile的更新，给出总结。参考格式：
+今天我观察到了 3 个新的行为证据，因此将你的 Platform Thinking 从 Emerging 提升为 Stable；Investment Thinking 仍保持 Emerging，因为在两个不同场景下，你都没有主动讨论 Opportunity Cost。下一次建议进入 Executive Trade-off 继续训练。
+
 
 ## 12. AI Architecture
 

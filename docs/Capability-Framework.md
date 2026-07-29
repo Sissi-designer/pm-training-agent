@@ -54,6 +54,8 @@ Agent 可以跳跃训练，但不能忽略底层能力长期缺失。
 
 ## 4. Agent Mapping
 
+> **Mapping Scope:** This table provides an overview of the primary and secondary capability mapping for each agent. The complete mapping, including context-dependent capabilities, is defined in each agent's module document.
+
 | Agent | Primary Capability | Secondary Capability |
 | --- | --- | --- |
 | Decision Gym | Problem Framing、Decision Making | Business Thinking |

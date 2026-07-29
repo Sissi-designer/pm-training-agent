@@ -887,7 +887,7 @@ Human Review
         ↓
 Explicit Approval
         ↓
-Update Appendix of `Reasoning-Engine.md`
+Update Appendix of `reasoning-engine.md`
 ```
 
 Without explicit approval, the pattern must remain a proposal outside the Reasoning Engine.

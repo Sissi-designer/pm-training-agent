@@ -194,7 +194,7 @@ Evaluation includes:
 - Supporting Evidence
 - Recommended Next Training
 
-具体能力项和能力阶段参考Capability Framework.md
+具体能力项和能力阶段参考 [Capability Framework](capability-framework.md)
 
 ### 2. Agent自动生成Biggest Blind Spot
 

@@ -2,831 +2,733 @@
 
 | Metadata | Value |
 | --- | --- |
-| Version | v1.0 |
-| Status | Active |
+| Version | v2.0 |
+| Status | Living Document |
 | Module Type | Training Module |
 | Owner | PM Training Agent |
 
-> Decision Gym trains the user to make clear, defensible product decisions under uncertainty.
+> Decision Gym trains users to make clear, defensible product decisions under uncertainty.
 >
-> The goal is not to discover the perfect answer.
+> It does not train users to find perfect answers.
 >
-> The goal is to develop a repeatable decision-making process.
+> It trains them to repeatedly produce high-quality product decisions through structured reasoning.
+
+---
+
+## Single Source of Truth
+
+Decision Gym is a training module.
+
+It inherits all generic runtime behavior from the PM Training Agent core architecture.
+
+Decision Gym defines:
+
+- decision-oriented training scenarios
+- decision-specific workflows
+- case progression
+- decision difficulty
+- decision-specific coaching emphasis
+- module outputs
+
+Decision Gym does **not** redefine:
+
+- coaching behavior
+- runtime stages
+- capability assessment
+- capability evidence generation
+- confidence updates
+- User Capability Profile
+- Pattern evolution
+- repository maintenance
+
+Those responsibilities belong to the corresponding core documents.
 
 ---
 
 ## 1. Purpose
 
-Decision Gym is a deliberate-practice module within the PM Training Agent.
+Decision Gym is a deliberate-practice module designed to strengthen product decision-making.
 
-It trains the user to make product decisions when:
+The module focuses on one central capability:
 
-- information is incomplete
-- multiple options appear reasonable
-- business and user goals may conflict
-- resources are limited
-- stakeholders have different priorities
-- the cost of waiting is uncertain
-- the decision must still be made
+> Making high-quality product decisions under uncertainty.
 
-The module focuses on the reasoning required to move from ambiguity to an explicit recommendation.
+A successful session teaches users to:
 
-Decision Gym is not primarily designed to test:
+- identify the real decision,
+- frame the correct problem,
+- determine what information actually matters,
+- compare meaningful alternatives,
+- make explicit recommendations,
+- defend recommendations under challenge,
+- understand why a recommendation should change.
 
-- domain knowledge
-- feature ideation
-- detailed solution design
-- interview memorization
-- framework recall
-- presentation fluency
+The objective is not faster answers.
 
-It is designed to train the user's ability to decide.
+The objective is progressively stronger decision quality.
 
 ---
 
-## 2. Module Positioning
+## 2. Document Boundaries
 
-Decision Gym is an execution module built on top of the PM Training Agent's three core documents.
+Decision Gym only defines module-specific behavior.
 
-| Core Document | Role in Decision Gym |
+It assumes the following documents already exist.
+
+| Core Document | Responsibility |
 | --- | --- |
-| Capability Framework | Defines which PM capabilities are being developed |
-| Reasoning Engine | Defines how the coach interprets the user's reasoning and capability evidence |
-| Coach Instruction | Defines how the coach conducts the training session |
-| Decision Gym | Defines the decision scenarios, module workflow, difficulty, and outputs |
+| Capability Framework | Defines product capabilities |
+| Reasoning Engine | Interprets observations and updates capability profiles |
+| Coach Instruction | Defines coaching runtime behavior |
+| Decision Gym | Defines decision-training scenarios and workflow |
 
-Decision Gym must not create a separate capability model or coaching philosophy.
+Whenever module behavior conflicts with a core document:
 
-When module-specific rules conflict with a core document, the core document takes precedence.
+**The core document always takes precedence.**
+
+Decision Gym must never redefine:
+
+- Runtime Stages
+- Coaching Intervention Ladder
+- Capability Evidence Schema
+- Capability Assessment Logic
+- Confidence Model
+- Capability Profile Update Rules
 
 ---
 
-## 3. Training Context
+## 3. Default Training Context
 
-The initial version of Decision Gym focuses primarily on Booking-like travel marketplace scenarios.
+Version 2.0 primarily uses Booking-like travel marketplace scenarios because they provide rich product decision trade-offs.
 
-Typical product areas include:
+Typical domains include:
 
-- post-booking customer experience
+- post-booking experience
 - booking confirmation
 - check-in preparation
-- reservation issues
-- room or amenity mismatch
-- changes and cancellations
-- customer support contacts
+- reservation failures
+- room mismatch
+- customer support
 - traveler self-service
-- property-facing workflows
-- property response efficiency
-- first-time traveler anxiety
-- cross-market product consistency
-- platform standardization
-- reusable service capabilities
+- property workflows
+- platform capabilities
 - marketplace trust
-- operational cost reduction
-- experiment and rollout decisions
+- rollout decisions
+- experimentation
+- platform standardization
 
-Cases should reflect the characteristics of a two-sided travel marketplace:
+These scenarios are only the initial training environment.
 
-- traveler and property interests may not fully align
-- the platform may not control the full service experience
-- operational processes often depend on external partners
-- customer problems may occur after the transaction
-- service recovery can require customer support intervention
-- market behavior may vary by region
-- platform-level solutions may compete with local flexibility
-- user trust and business efficiency may create tension
+Decision Gym is intentionally domain-independent.
 
-The module should use realistic marketplace constraints without claiming access to confidential Booking.com information.
+Future versions may support:
 
----
+- E-commerce
+- SaaS
+- AI Products
+- Advertising
+- Payments
+- Developer Platforms
+- Enterprise Software
+- Marketplaces
 
-## 4. Primary Training Outcomes
-
-Decision Gym should help the user consistently perform the following actions.
-
-### 4.1 Identify the actual decision
-
-The user should distinguish between:
-
-- a problem
-- an analysis question
-- a solution idea
-- and the decision that must be made
-
-The decision should identify:
-
-- who must decide
-- what must be decided
-- why the decision is needed now
-- what options are available
-- what happens if no action is taken
+The decision methodology remains consistent across domains.
 
 ---
 
-### 4.2 Frame the relevant problem
+## 4. Training Philosophy
 
-The user should define the problem at the level required for the decision.
+Decision Gym assumes that strong product managers are distinguished less by the amount of knowledge they possess and more by the quality of decisions they make.
 
-A useful problem frame should normally clarify:
+Every session should therefore train users to:
 
-- affected user or stakeholder
-- observed behavior or failure
-- user impact
-- business impact
-- scope
-- urgency
-- known evidence
-- remaining uncertainty
+- tolerate uncertainty,
+- reason before acting,
+- prioritize information,
+- evaluate trade-offs,
+- commit to explicit recommendations,
+- revise decisions when evidence changes.
 
-The user should avoid framing the problem solely as the absence of a proposed feature.
+The coach should avoid optimizing for:
 
----
+- interview memorization,
+- framework recall,
+- polished communication,
+- exhaustive analysis,
+- perfect certainty.
 
-### 4.3 Identify decision-critical information
-
-The user should distinguish between:
-
-- information that is interesting
-- information that improves understanding
-- and information that could change the decision
-
-The user should be able to explain:
-
-- why a requested data point matters
-- how different results would affect the recommendation
-- whether the decision can proceed without it
-- what minimum evidence is sufficient
+Decision quality remains the primary learning objective.
 
 ---
 
-### 4.4 Compare meaningful alternatives
+## 5. Primary Training Outcomes
 
-The user should consider more than one credible option.
+Every Decision Gym session should help the user improve one or more of the following abilities.
 
-Alternatives may include:
+### Identify the Decision
 
-- build
-- experiment
-- improve an existing flow
-- use operations
-- rely on partners
-- standardize
-- allow local variation
-- postpone
-- stop investing
-- take no action
+The user should distinguish:
 
-The user should avoid comparing one preferred solution against obviously weak alternatives.
+- the observable problem,
+- the analysis question,
+- possible solutions,
+- and the actual decision.
 
----
+The decision should clarify:
 
-### 4.5 Evaluate investment value
-
-The user should connect the product opportunity to:
-
-- user value
-- business value
-- strategic value
-- implementation cost
-- operational cost
-- confidence
-- opportunity cost
-- reversibility
-- time to impact
-
-The user should be able to explain why the company should or should not invest.
+- who decides,
+- what must be decided,
+- why now,
+- available options,
+- consequences of inaction.
 
 ---
 
-### 4.6 Make an explicit recommendation
+### Frame the Correct Problem
 
-The user should conclude with a clear decision.
+The user should define the problem at the decision level rather than the feature level.
 
-The recommendation should normally include:
+A useful frame normally explains:
 
-- chosen option
-- rationale
-- priority
-- scope
-- timing
-- major assumptions
-- trade-offs
-- next validation step
-- conditions that would reverse the decision
+- affected users,
+- affected stakeholders,
+- user impact,
+- business impact,
+- scope,
+- urgency,
+- uncertainty.
 
 ---
 
-### 4.7 Defend the recommendation
+### Prioritize Information
 
-The user should be able to respond when the recommendation is challenged by:
+The user should request information that could actually change the decision.
 
-- missing data
-- stakeholder objections
-- execution risk
-- regional differences
-- platform constraints
-- alternative investments
-- weak adoption
-- unexpected negative impact
+For every important information request, the user should understand:
 
-The objective is not to defend the original recommendation at all costs.
-
-The user should know when to maintain, modify, or reverse the decision.
+- why it matters,
+- what hypothesis it tests,
+- what decision threshold exists,
+- how the recommendation changes if the result differs.
 
 ---
 
-## 5. Capability Mapping
+### Compare Meaningful Alternatives
 
-Decision Gym does not train all capabilities equally in every session.
+Alternatives should all represent realistic choices.
 
-Each case should define one or two primary capability targets.
+Typical alternatives include:
 
-### 5.1 Primary capabilities
-
-#### Problem Framing
-
-The ability to identify the actual problem, decision owner, scope, and objective before discussing solutions.
-
-#### Investment Thinking
-
-The ability to determine whether an opportunity deserves investment relative to expected value, cost, uncertainty, and opportunity cost.
-
-#### Decision Making
-
-The ability to convert analysis into an explicit recommendation under uncertainty.
+- invest,
+- experiment,
+- improve existing workflow,
+- operational solution,
+- partner solution,
+- platform investment,
+- local optimization,
+- postpone,
+- stop investing,
+- do nothing.
 
 ---
 
-### 5.2 Secondary capabilities
+### Evaluate Investment Value
 
-#### Business Thinking
+The user should connect product opportunities to:
 
-The ability to connect user problems and product actions to business outcomes.
-
-#### Strategic Thinking
-
-The ability to evaluate alternatives in the context of longer-term direction, positioning, and future consequences.
-
----
-
-### 5.3 Context-dependent capabilities
-
-#### Platform Thinking
-
-This becomes relevant when the case involves:
-
-- shared capabilities
-- standardization
-- reusable services
-- cross-business workflows
-- local versus global architecture
-- platform adoption
-- platform governance
-
-#### Influence Thinking
-
-This becomes relevant when the user must:
-
-- present the recommendation to leadership
-- align customer support and product teams
-- influence property-facing teams
-- negotiate with regional teams
-- respond to stakeholder objections
-
-A case should not force Platform Thinking or Influence Thinking when they are not naturally relevant.
+- user value,
+- business value,
+- implementation cost,
+- operational cost,
+- strategic leverage,
+- opportunity cost,
+- reversibility,
+- uncertainty.
 
 ---
 
-## 6. Supported Decision Types
+### Produce an Explicit Recommendation
 
-Decision Gym should draw from a stable set of product decision types.
+Every session should converge toward an explicit recommendation.
 
-### 6.1 Investment decision
+A recommendation normally explains:
 
-Examples:
-
-- Should the company invest in a new self-service capability?
-- Is the customer problem large enough to justify platform investment?
-- Should a temporary operational solution become a product capability?
-
----
-
-### 6.2 Prioritization decision
-
-Examples:
-
-- Which post-booking issue should be addressed first?
-- Should the team prioritize booking confirmation, property contact, or change requests?
-- Which market should receive the next product rollout?
+- what should happen,
+- why,
+- why now,
+- assumptions,
+- trade-offs,
+- scope,
+- validation plan,
+- reversal conditions.
 
 ---
 
-### 6.3 Continue, modify, pause, or stop
+### Defend the Recommendation
 
-Examples:
+The user should learn to revise—not merely defend—the recommendation when challenged by:
 
-- An experiment improves self-service usage but does not reduce support contacts. What should the team do?
-- A feature shows high adoption but no measurable business impact.
-- A platform migration is behind schedule and regional teams are resisting adoption.
+- new evidence,
+- stakeholder objections,
+- implementation constraints,
+- market differences,
+- business priorities,
+- opportunity cost,
+- unexpected outcomes.
 
----
-
-### 6.4 Build, buy, partner, or operate
-
-Examples:
-
-- Should the platform build a messaging capability or use an existing provider?
-- Should the problem be solved through product automation or customer support operations?
-- Should the platform rely on property partners to confirm reservations earlier?
+Changing one's recommendation after meaningful evidence is often evidence of stronger reasoning rather than weaker confidence.
 
 ---
 
-### 6.5 Standardization versus customization
+## 6. Capability Mapping
 
-Examples:
+Decision Gym does not train every capability equally.
 
-- Should the same self-service experience be used across all markets?
-- Should regional teams be allowed to customize issue flows?
-- Should different property types follow one standard confirmation process?
+Each session should explicitly define:
 
----
+- one primary capability,
+- one optional secondary capability.
 
-### 6.6 Experiment versus full rollout
+Possible primary capabilities include:
 
-Examples:
+- Problem Framing
+- Investment Thinking
+- Decision Making
 
-- Is there enough evidence to launch broadly?
-- Should the team test in one market or several?
-- Which risks require validation before scaling?
+Possible secondary capabilities include:
 
----
+- Business Thinking
+- Strategic Thinking
+- Platform Thinking
+- Influence Thinking
 
-### 6.7 Short-term impact versus long-term capability
+Capability definitions are inherited directly from the Capability Framework.
 
-Examples:
-
-- Should the team optimize an existing support flow or build a reusable issue-resolution platform?
-- Should the team solve one high-volume issue or create a common capability for multiple issues?
-
----
-
-### 6.8 Local optimization versus platform consistency
-
-Examples:
-
-- A regional solution performs better locally but creates long-term fragmentation.
-- A global platform lowers development cost but performs worse in one market.
-- A shared component requires regional teams to give up flexibility.
+Decision Gym does not redefine capability definitions.
 
 ---
 
-### 6.9 Action under insufficient evidence
+## 7. Supported Decision Types
 
-Examples:
+Decision Gym supports multiple categories of product decisions.
 
-- The problem appears important, but the available data is incomplete.
-- Waiting for better evidence may create customer or business risk.
-- An irreversible investment must be considered before uncertainty is resolved.
+Typical categories include:
 
----
+- Investment Decision
+- Prioritization Decision
+- Continue / Modify / Stop
+- Build / Buy / Partner
+- Standardization vs Customization
+- Experiment vs Rollout
+- Short-term vs Long-term
+- Local vs Platform
+- Decision Under Incomplete Evidence
+- Reversal Decision
 
-### 6.10 Reversal decision
+Cases may combine multiple decision types when appropriate.
 
-Examples:
-
-- What evidence should cause the team to stop the initiative?
-- When should a platform strategy be reconsidered?
-- When should the team return to an operational solution?
-
----
-
-## 7. Session Inputs
-
-A Decision Gym session may be initiated from one of four input types.
-
-### 7.1 Generated case
-
-The agent creates a new Booking-like product decision scenario.
-
-Use this when:
-
-- the user wants deliberate practice
-- no real case has been provided
-- a specific capability needs targeted training
-- controlled difficulty is important
+However, every session should ultimately converge toward one primary recommendation.
 
 ---
 
-### 7.2 Real work situation
+## 8. Session Inputs
 
-The user provides a real product decision.
+A Decision Gym session may begin from:
 
-The agent should help anonymize or abstract sensitive details when necessary.
+- a generated practice case,
+- a real product decision,
+- a product interview case,
+- a historical project review,
+- a recommended next training from the Reasoning Engine.
 
-The agent should not assume that the user's current framing is correct.
-
----
-
-### 7.3 Interview case
-
-The user provides or requests a product interview scenario.
-
-The module should still train real decision quality rather than optimizing only for interview performance.
+The source of the case does not change the coaching methodology.
 
 ---
 
-### 7.4 Historical project review
+## 9. Session Configuration
 
-The user revisits a previous project decision.
+Before Active Training begins, the coach establishes a lightweight internal session configuration.
 
-The objective is to evaluate:
-
-- what was known at the time
-- what decision was made
-- which assumptions were correct
-- what was missed
-- what the user would do differently now
-
-The agent should avoid judging the past decision only from the final outcome.
-
----
-
-## 8. Session Configuration
-
-Before starting, the agent should establish a lightweight internal session configuration.
+Example:
 
 ```yaml
 module: Decision Gym
-case_context: Booking-like travel marketplace
-case_type: Investment Decision
+case_context: Booking-like Marketplace
+decision_type: Investment Decision
 primary_capability:
   - Investment Thinking
 secondary_capability:
   - Decision Making
 difficulty: Intermediate
 decision_owner: Product Director
-expected_output: Investment recommendation
-session_constraint:
-  - Incomplete impact data
+expected_output: Investment Recommendation
+session_constraints:
+  - Incomplete evidence
   - Limited engineering capacity
 stopping_condition:
-  - Explicit recommendation challenged by one major assumption
+  - Explicit recommendation
+  - One meaningful challenge completed
 ```
 
-The configuration does not always need to be shown to the user.
+The configuration is primarily for internal runtime planning.
 
-The user should receive only the information required to begin reasoning.
+It does not need to be fully exposed to the user.
 
 ---
 
-## 9. Session Workflow
+## 10. Runtime Structure
 
-A typical Decision Gym session follows the workflow below.
+Decision Gym follows the standard runtime defined by the Coach Instruction.
 
 ```text
-Case Setup
+Decision Gym Runtime
+
+Stage One
+Active Training
+
     ↓
-Decision Identification
-    ↓
-Initial Problem Framing
-    ↓
-Information Prioritization
-    ↓
-Alternative Generation
-    ↓
-Evaluation and Trade-offs
-    ↓
-Preliminary Recommendation
-    ↓
-Assumption Challenge
-    ↓
-Final Recommendation
-    ↓
-Session Reflection
-    ↓
-Capability Evidence
-    ↓
-Next Training Focus
+
+Stage Two
+Session Review
 ```
 
-The coach may return to an earlier stage when a foundational gap appears.
+Decision Gym does not introduce additional runtime modes.
+
+The module specializes the activities performed during Active Training while relying on the shared Session Review defined by the Coach Instruction.
 
 ---
 
-## 10. Stage 1 — Case Setup
+## Part I — Active Training
 
-The case setup should provide enough context for meaningful reasoning without resolving the decision.
+## 11. Case Setup
 
-A case should normally include:
+Active Training begins by presenting a decision scenario.
 
-- business context
-- user or partner context
-- observable problem
-- available evidence
-- relevant constraints
-- required decision
+The case should provide sufficient context for meaningful reasoning while preserving uncertainty.
 
-The initial setup should not include every possible metric.
+A typical case should include:
 
-The user should determine what additional information matters.
+- business context,
+- user or stakeholder context,
+- observable problem,
+- currently available evidence,
+- major constraints,
+- explicit decision requirement.
 
-### Example structure
+The case should deliberately avoid providing every useful metric.
+
+Instead, the user should determine what additional information is worth requesting.
+
+A good case creates productive uncertainty rather than artificial ambiguity.
+
+---
+
+### Case Design Principles
+
+Every case should:
+
+- begin from a business decision,
+- avoid implying a preferred solution,
+- contain multiple credible alternatives,
+- include realistic organizational constraints,
+- allow meaningful trade-offs,
+- remain internally consistent.
+
+The objective is not to hide information.
+
+The objective is to require thoughtful prioritization.
+
+---
+
+### Example Structure
 
 ```text
-You are the PM responsible for post-booking self-service.
+You are the Product Manager responsible for post-booking customer experience.
 
-Customer support contacts related to check-in have increased in several Southeast Asian markets.
+Customer support contacts related to check-in have increased across several Southeast Asian markets.
 
-A large share of contacts come from first-time bookers who want to confirm whether the property has received their reservation.
+Many contacts come from first-time travelers who want reassurance that their reservation has been received by the property.
 
-A proposed solution would automatically request property confirmation several days before check-in and show the status to travelers.
+One proposal is to proactively request property confirmation several days before check-in and expose the confirmation status to travelers.
 
-The solution requires integration with property-facing systems and may increase property workload.
+This solution requires significant engineering effort and increased property participation.
 
-You have limited engineering capacity for the next two quarters.
+Engineering capacity is limited for the next two quarters.
 
-You need to recommend whether the company should invest in this capability now.
+You must recommend whether the company should invest in this capability now.
 ```
 
-The case should end with an explicit decision requirement.
+The case should conclude with one explicit decision question.
 
 ---
 
-## 11. Stage 2 — Decision Identification
+## 12. Decision Identification
 
-Before detailed analysis, the coach should verify that the user understands the actual decision.
+Before analyzing the situation, the coach should ensure that the user understands the actual decision.
 
 The user should clarify:
 
-- What is being decided?
-- Who is making the decision?
-- What is the relevant time horizon?
-- What options are currently available?
-- What happens if no investment is made?
+- What is the decision?
+- Who owns the decision?
+- Why is it being made now?
+- What alternatives currently exist?
+- What happens if no action is taken?
 
-The coach should redirect the user when they mistake the case for:
+The coach should intervene when the user mistakes the exercise for:
 
-- a data analysis task
-- a feature design task
-- a root-cause investigation only
-- a brainstorming exercise
+- feature design,
+- data exploration,
+- root-cause analysis,
+- brainstorming,
+- implementation planning.
 
-The user may need analysis, but analysis must serve the decision.
-
----
-
-## 12. Stage 3 — Initial Problem Framing
-
-The user should establish a first problem frame before proposing a solution.
-
-The frame should normally cover:
-
-- target traveler or property segment
-- user problem
-- behavioral evidence
-- business consequence
-- scale
-- scope
-- urgency
-- uncertainty
-
-The coach should observe whether the user:
-
-- begins from the solution
-- confuses symptoms with causes
-- assumes the highest-volume problem is automatically the highest-value problem
-- ignores the marketplace side that bears the cost
-- treats support contact reduction as the only goal
-- separates traveler anxiety from actual service failure
-
-The first frame does not need to be complete.
-
-It should be sufficient to guide the next information request.
+Analysis should always serve the decision.
 
 ---
 
-## 13. Stage 4 — Information Prioritization
+## 13. Initial Problem Framing
 
-The user may ask for additional information.
+The user should establish an initial problem frame before discussing solutions.
+
+A useful frame normally explains:
+
+- target users,
+- affected stakeholders,
+- observable behavior,
+- user impact,
+- business consequence,
+- scope,
+- urgency,
+- uncertainty.
+
+The first problem frame does not need to be complete.
+
+Its purpose is to guide subsequent reasoning.
+
+---
+
+### Coaching Focus
+
+During this stage the coach should observe whether the user:
+
+- starts from a feature instead of a problem,
+- confuses symptoms with causes,
+- assumes the highest-volume issue deserves investment,
+- ignores one side of the marketplace,
+- focuses only on customer support metrics,
+- overlooks business objectives.
+
+The coach should reveal these issues through questioning rather than immediate correction.
+
+---
+
+## 14. Information Prioritization
+
+The user may request additional information throughout the case.
 
 The coach should not immediately provide every requested data point.
 
-For each material request, the coach may ask:
+Instead, the coach should frequently ask:
 
-> Why does this information matter, and how would different results change your decision?
+> Why does this information matter?
 
-A strong information request should specify:
+or
 
-- the question
-- the hypothesis
-- the decision impact
-- the expected threshold or interpretation
+> How would different results change your recommendation?
 
-### Example
+The purpose is to distinguish between:
 
-Weak request:
-
-> I want to know the support contact rate.
-
-Stronger request:
-
-> I want to compare the contact rate of first-time and repeat bookers for confirmation-related issues. If the problem is highly concentrated among first-time users, I may prefer a targeted reassurance solution before investing in a full property-confirmation platform.
-
-The coach should distinguish between:
-
-- decision-critical evidence
-- useful supporting evidence
-- information that can be learned after an experiment
-- information that is unlikely to change the decision
+- decision-critical information,
+- useful supporting information,
+- information that can be learned later,
+- information unlikely to affect the decision.
 
 ---
 
-## 14. Stage 5 — Alternative Generation
+### Strong Information Requests
 
-The user should identify credible alternatives before selecting a recommendation.
+A strong request normally includes:
 
-Depending on the case, alternatives may include:
+- the question,
+- the hypothesis,
+- the expected decision impact,
+- the interpretation threshold.
 
-- do nothing
-- improve communication
-- add traveler-facing self-service
-- automate property outreach
-- create operational support
-- build a reusable platform capability
-- target only high-risk bookings
-- run a limited experiment
-- partner with another team
-- postpone investment
+Example:
 
-The coach should challenge false alternatives.
+Weak:
 
-For example, comparing:
+> I want conversion data.
 
-- a fully developed platform
-- with doing absolutely nothing
+Stronger:
 
-may hide lower-cost or staged options.
+> I want to compare conversion differences between first-time and repeat travelers. If only first-time users are affected, I may recommend a targeted investment instead of a platform capability.
 
-The user should consider whether the decision can be decomposed into phases.
+The coach should reward information quality rather than information quantity.
 
 ---
 
-## 15. Stage 6 — Evaluation and Trade-offs
+## 15. Alternative Generation
 
-The user should compare alternatives using criteria appropriate to the decision.
+Before recommending an option, the user should identify multiple credible alternatives.
 
-Possible criteria include:
+Alternatives may include:
 
-### User value
+- do nothing,
+- improve communication,
+- improve operations,
+- improve an existing workflow,
+- create a traveler-facing experience,
+- automate partner interaction,
+- build a reusable capability,
+- run an experiment,
+- postpone,
+- partner with another team.
 
-- reduction in uncertainty
-- reduction in failed check-ins
-- faster issue resolution
-- increased trust
-- improved self-service completion
+The coach should discourage false comparisons such as:
 
-### Business value
+Platform solution
 
-- lower support contact volume
-- lower operational cost
-- higher retention
-- fewer cancellations
-- reduced compensation cost
-- stronger marketplace trust
+vs
 
-### Partner value and cost
+Do nothing
 
-- additional property workload
-- response requirements
-- operational complexity
-- partner adoption
-- partner satisfaction
-
-### Investment
-
-- engineering cost
-- integration complexity
-- operational dependency
-- maintenance cost
-- rollout effort
-- organizational coordination
-
-### Strategic leverage
-
-- reuse across issue types
-- reuse across markets
-- contribution to a shared platform
-- future automation potential
-- data or learning advantage
-
-### Risk
-
-- false confirmation
-- increased traveler expectation
-- low property response rate
-- regional variation
-- poor adoption
-- unintended support contacts
-- displacement of higher-value work
-
-The coach should not require the user to mechanically cover every criterion.
-
-The user should select the criteria that determine the decision.
+when several intermediate options exist.
 
 ---
 
-## 16. Stage 7 — Preliminary Recommendation
+### Decision Sequencing
 
-The coach should ask for a recommendation before all uncertainty is removed.
+The user should also consider whether the recommendation can be staged.
 
-A preliminary recommendation should include:
+Examples include:
 
-```text
-I recommend...
+- experiment before rollout,
+- operational mitigation before automation,
+- local validation before platform investment,
+- targeted deployment before global rollout.
 
-because...
-
-The primary value is...
-
-The strongest evidence is...
-
-The largest uncertainty is...
-
-Compared with the alternatives...
-
-I would initially scope it to...
-
-I would not invest in...
-
-```
-
-The recommendation must be specific enough to challenge.
-
-The coach should not accept responses such as:
-
-- “It depends.”
-- “We need more data.”
-- “We can try several things.”
-- “Both options have advantages.”
-- “I would align with stakeholders first.”
-
-These may be valid considerations but are not decisions.
+Sequencing often produces stronger decisions than choosing between two extremes.
 
 ---
 
-## 17. Stage 8 — Assumption Challenge
+## 16. Evaluation and Trade-offs
 
-After the user makes a preliminary recommendation, the coach should introduce at least one meaningful challenge.
+The user should compare alternatives using criteria appropriate for the decision.
 
-The challenge should target the reasoning rather than create random difficulty.
+Possible evaluation dimensions include:
 
-### Possible challenges
+#### User Value
 
-#### Low partner response
+- trust,
+- task completion,
+- reduced uncertainty,
+- reduced failure,
+- faster resolution.
 
-Only a minority of properties respond to confirmation requests.
+#### Business Value
 
-#### No contact reduction
+- operational cost,
+- retention,
+- marketplace trust,
+- cancellation reduction,
+- customer lifetime value.
 
-The experience increases traveler engagement but does not reduce support contacts.
+#### Partner Impact
 
-#### Market variation
+- workload,
+- adoption,
+- operational burden,
+- response requirements.
 
-The problem is significant in Southeast Asia but limited in Europe.
+#### Investment
 
-#### Cannibalization
+- engineering effort,
+- maintenance,
+- rollout complexity,
+- organizational coordination.
 
-The new self-service flow moves users away from a more effective existing solution.
+#### Strategic Leverage
 
-#### Increased expectation
+- reuse,
+- scalability,
+- platform value,
+- future optionality.
 
-Showing a pending confirmation status creates more anxiety than the current experience.
+#### Risk
 
-#### Opportunity cost
+- unintended behavior,
+- partner resistance,
+- opportunity cost,
+- adoption uncertainty,
+- regional differences.
 
-The same engineering resources could address failed payment recovery or cancellation self-service.
+The coach should not require every criterion.
 
-#### Weak reuse
-
-The proposed platform capability is only useful for one issue type.
-
-#### Stakeholder objection
-
-Customer support supports the initiative, but the property team believes it will damage partner experience.
-
-The user should determine whether the challenge:
-
-- changes the recommendation
-- changes the scope
-- changes the sequence
-- changes the validation plan
-- or does not materially change the decision
+The user should determine which criteria actually decide the recommendation.
 
 ---
 
-## 18. Stage 9 — Final Recommendation
+## 17. Preliminary Recommendation
 
-The final recommendation should normally contain the following elements.
+The coach should request a recommendation before uncertainty has been eliminated.
+
+The recommendation should normally include:
+
+- recommended option,
+- rationale,
+- primary value,
+- strongest evidence,
+- largest uncertainty,
+- rejected alternatives,
+- initial scope.
+
+Responses such as:
+
+- "It depends."
+- "We need more data."
+- "Let's try everything."
+
+should not conclude the decision.
+
+Reasonable uncertainty is acceptable.
+
+Decision avoidance is not.
+
+---
+
+## 18. Assumption Challenge
+
+Once the user commits to a recommendation, the coach should introduce one meaningful challenge.
+
+The challenge should directly test an important assumption rather than introduce arbitrary difficulty.
+
+Possible challenges include:
+
+- partner adoption is much lower than expected,
+- user adoption increases but business outcomes do not,
+- another investment has significantly higher expected ROI,
+- regional behavior differs substantially,
+- implementation cost doubles,
+- the solution cannot be reused,
+- an important stakeholder disagrees,
+- new evidence contradicts an earlier assumption.
+
+The user should determine whether the recommendation should:
+
+- remain unchanged,
+- change scope,
+- change sequence,
+- change validation,
+- or be replaced entirely.
+
+Changing the recommendation after meaningful evidence is often evidence of stronger reasoning.
+
+---
+
+## 19. Final Recommendation
+
+The final recommendation should normally explain:
 
 ### Decision
 
@@ -834,937 +736,1013 @@ What should the company do?
 
 ### Scope
 
-Which users, markets, issue types, or partners are included?
+Who or what is included?
 
 ### Rationale
 
-Why is this option preferable to the alternatives?
+Why is this preferable?
 
-### Evidence
+### Supporting Evidence
 
 What evidence most strongly supports the decision?
 
-### Assumptions
+### Critical Assumptions
 
-What must be true for the decision to succeed?
+What must remain true?
 
 ### Trade-offs
 
-What value, flexibility, speed, or opportunity is being sacrificed?
+What value or flexibility is sacrificed?
 
-### Validation
+### Validation Plan
 
 What should be tested before broader investment?
 
-### Success measures
+### Success Measures
 
-How will the team know whether the decision is working?
+How will success be measured?
 
-### Reversal conditions
+### Reversal Conditions
 
-What evidence would cause the team to modify, pause, or stop?
+What evidence would justify changing the recommendation?
 
-A strong final recommendation may still contain uncertainty.
-
-The user should make the uncertainty explicit rather than hiding it.
+The recommendation should make uncertainty explicit rather than hiding it.
 
 ---
 
-## 19. Difficulty Model
+## 20. Active Training Completion
 
-Difficulty should be adjusted through meaningful decision dimensions rather than by adding unnecessary detail.
+Active Training concludes when the user has demonstrated independent decision-making.
 
-### 19.1 Foundation
+Completion normally requires:
 
-Characteristics:
+- identifying the decision,
+- framing the problem,
+- requesting meaningful information,
+- comparing credible alternatives,
+- evaluating trade-offs,
+- producing an explicit recommendation,
+- responding to one meaningful challenge,
+- defining validation or reversal conditions.
 
-- decision is explicit
-- one primary user group
-- limited number of options
-- relatively complete evidence
-- reversible decision
-- limited stakeholder conflict
+Completion is determined by reasoning quality rather than conversation length.
 
-Expected behavior:
-
-- frame the problem
-- identify key information
-- compare options
-- make a recommendation
+Only after Active Training concludes should Decision Gym transition into Session Review.
 
 ---
 
-### 19.2 Intermediate
+## Part II — Session Review
 
-Characteristics:
+## 21. Session Review Purpose
 
-- incomplete evidence
-- two-sided marketplace impact
-- several credible alternatives
-- resource constraint
-- moderate stakeholder disagreement
-- meaningful opportunity cost
+Session Review begins after Active Training has concluded.
 
-Expected behavior:
+Its purpose is not to continue solving the case.
 
-- prioritize decision-critical evidence
-- balance traveler, business, and partner value
-- propose staged investment
-- state assumptions and trade-offs
+Its purpose is to consolidate learning.
 
----
+During Session Review, the coach helps the user understand:
 
-### 19.3 Advanced
+- what reasoning was demonstrated,
+- what improved,
+- what remained incomplete,
+- what capability should be strengthened next.
 
-Characteristics:
+Decision Gym inherits the Session Review philosophy from the Coach Instruction.
 
-- decision itself may be ambiguous
-- evidence conflicts across markets
-- short-term and long-term value diverge
-- platform and local interests conflict
-- adoption is uncertain
-- recommendation affects multiple teams
-- some consequences are difficult to reverse
-
-Expected behavior:
-
-- define the decision
-- identify the correct thinking level
-- manage uncertainty
-- evaluate strategic leverage
-- make an executive-level recommendation
-- define reversal conditions
+The module focuses on reviewing decision quality rather than extending the case indefinitely.
 
 ---
 
-### 19.4 Executive
+## 22. Review Sequence
 
-Characteristics:
+A typical Decision Gym Session Review follows the sequence below.
 
-- several investments compete for limited resources
-- organizational incentives conflict
-- no option is clearly superior
-- user, partner, financial, and strategic outcomes conflict
-- information will remain incomplete
-- timing itself is part of the decision
-- recommendation must be communicated to senior leadership
+```text
+Review Final Recommendation
+        ↓
+Highlight Strong Decision Behaviors
+        ↓
+Identify Primary Development Area
+        ↓
+Explain Why It Matters
+        ↓
+User Restates the Learning
+        ↓
+Prepare Runtime Observations
+        ↓
+Reasoning Engine Handoff
+        ↓
+Recommend Next Training
+```
 
-Expected behavior:
-
-- simplify complexity without ignoring it
-- identify the decisive trade-off
-- explain what the company should not do
-- make a time-bound recommendation
-- defend the decision under challenge
-- communicate uncertainty with confidence and precision
-
----
-
-## 20. Difficulty Adjustment Rules
-
-The agent should adjust difficulty based on the User Capability Profile and current session performance.
-
-### Increase difficulty when the user:
-
-- frames the decision without assistance
-- consistently requests decision-critical information
-- compares alternatives with explicit criteria
-- identifies opportunity cost
-- makes clear recommendations
-- states reversal conditions
-- handles challenges without losing structure
-
-### Reduce or stabilize difficulty when the user:
-
-- cannot identify the decision
-- repeatedly enters solution design too early
-- asks for large amounts of non-critical information
-- cannot compare alternatives
-- avoids making a recommendation
-- becomes dependent on direct explanations
-- cannot transfer a concept after feedback
-
-Difficulty should not be increased simply because the user answers quickly.
+The review should remain concise and centered on learning transfer.
 
 ---
 
-## 21. Case Design Rules
+## 23. Reviewing the Final Decision
 
-### 21.1 Start from a decision, not a topic
+Begin by reviewing the user's final recommendation rather than replaying the entire conversation.
 
-Weak case:
+The review should explain:
 
-> Improve the post-booking experience.
+- why the recommendation became stronger,
+- which reasoning improved,
+- what assumptions remained,
+- what trade-offs were handled well,
+- what still limited decision quality.
 
-Strong case:
-
-> Decide whether the team should invest the next two quarters in a proactive booking-confirmation capability.
-
----
-
-### 21.2 Avoid a single obvious answer
-
-Each case should contain at least two credible options.
-
-The best recommendation may depend on:
-
-- scope
-- assumptions
-- timing
-- risk tolerance
-- strategic priorities
+The review should focus on reasoning quality rather than whether the recommendation matches the coach's preferred answer.
 
 ---
 
-### 21.3 Include realistic constraints
+### Highlight Strong Decision Behaviors
 
-Useful constraints include:
+Strengths should always be behavior-based.
 
-- limited engineering capacity
-- incomplete data
-- dependency on property adoption
-- regional differences
-- customer support cost
-- platform architecture
-- existing roadmap commitments
-- legal or operational constraints
+Examples include:
 
-Constraints should materially affect the decision.
+- identified the decision before discussing solutions,
+- connected user value to business value,
+- requested decision-critical information,
+- explicitly compared alternatives,
+- acknowledged opportunity cost,
+- revised the recommendation when evidence changed,
+- explained trade-offs clearly,
+- identified reversal conditions.
 
----
+Avoid vague praise such as:
 
-### 21.4 Separate symptom from cause
+> Good job.
 
-The case may present an observable symptom while leaving the underlying cause uncertain.
-
-Example:
-
-- support contacts increased
-- but the cause may be actual booking failure, user anxiety, unclear communication, or low trust
-
-The user should not be rewarded for assuming one cause without evidence.
+Instead explain exactly what behavior strengthened the decision.
 
 ---
 
-### 21.5 Represent both sides of the marketplace
+### Identify the Primary Development Area
 
-Where relevant, the case should include:
+Every review should identify one highest-leverage improvement area.
 
-- traveler value and cost
-- property value and cost
-- platform value and cost
+Possible development areas include:
 
-The module should avoid treating property participation as free or automatic.
+- problem framing,
+- investment thinking,
+- prioritization,
+- trade-off reasoning,
+- uncertainty management,
+- recommendation quality,
+- assumption awareness.
 
----
-
-### 21.6 Make inaction a real option
-
-The case should allow the user to recommend:
-
-- no investment
-- delayed investment
-- a smaller experiment
-- operational mitigation
-- reuse of an existing capability
-
-The agent should not assume every case requires a new product.
+The objective is focus rather than exhaustiveness.
 
 ---
 
-### 21.7 Avoid hidden domain trivia
+### Explain Why It Matters
 
-The case should contain or provide the domain facts required for reasoning.
+Development areas should always include consequences.
 
-The coach should not assess the user based on undisclosed Booking-specific knowledge.
+For example:
 
----
+Weak prioritization leads to investing in lower-value work.
 
-### 21.8 Reveal information progressively
+Weak investment thinking creates features without sufficient business value.
 
-Additional data should be provided based on the user's questions.
+Weak trade-off reasoning creates unrealistic recommendations.
 
-The data should test whether the user understands:
+Weak decision ownership leads to endless analysis without commitment.
 
-- why the information matters
-- what threshold would affect the decision
-- how the evidence changes the recommendation
-
-The agent should remain internally consistent across all revealed information.
+Understanding consequences improves future transfer.
 
 ---
 
-## 22. Booking-Like Case Domains
+## 24. User Reflection
 
-The initial case library should prioritize the following domains.
+Before concluding the session, encourage the user to articulate the learning independently.
 
-### 22.1 Booking confirmation
+Useful prompts include:
 
-Potential decisions:
+- What changed in your thinking?
+- What assumption did you originally overlook?
+- What would you do differently next time?
+- How would you recognize a similar decision in another product context?
+- Which part of your recommendation became stronger?
 
-- whether to introduce proactive confirmation
-- whether confirmation should depend on booking risk
-- whether property response should be mandatory
-- whether status should be exposed to travelers
-- whether the capability should be shared across markets
-
----
-
-### 22.2 Check-in issues
-
-Potential decisions:
-
-- which check-in issue deserves investment first
-- whether to intervene before arrival
-- whether to automate issue detection
-- whether to route users to self-service or support
-- whether the solution should target first-time travelers
+Learning is reinforced when users reconstruct the insight themselves.
 
 ---
 
-### 22.3 Room and amenity mismatch
+## 25. User-Facing Session Output
 
-Potential decisions:
+The visible output of Decision Gym should summarize the completed learning experience.
 
-- whether to improve content quality or post-booking confirmation
-- whether to ask properties to reconfirm high-risk attributes
-- whether to prioritize prevention or service recovery
-- whether the same capability can be reused across mismatch types
-
----
-
-### 22.4 Customer support contact reduction
-
-Potential decisions:
-
-- which contact types should move to self-service
-- whether usage or contact reduction is the primary goal
-- whether users prefer reassurance over task completion
-- whether a self-service feature has enough business value
-- whether support should remain the preferred channel for high-risk cases
-
----
-
-### 22.5 First-time booker experience
-
-Potential decisions:
-
-- whether to create a dedicated first-time experience
-- whether anxiety should be addressed through content, status, or human support
-- whether a targeted solution creates unnecessary product complexity
-- whether first-time behavior predicts long-term retention
-
----
-
-### 22.6 Property communication
-
-Potential decisions:
-
-- whether to improve traveler-to-property messaging
-- whether the platform should mediate communication
-- whether response-time guarantees are realistic
-- whether automation creates partner burden
-- whether communication should become a shared platform capability
-
----
-
-### 22.7 Change and cancellation self-service
-
-Potential decisions:
-
-- which requests can be safely automated
-- when property approval is required
-- whether self-service should optimize speed or flexibility
-- how to handle regional policy differences
-- when support escalation should remain available
-
----
-
-### 22.8 Cross-market platform standardization
-
-Potential decisions:
-
-- whether local flows should migrate to a common platform
-- which variation should be supported
-- whether to mandate or incentivize adoption
-- how to evaluate migration value
-- when local performance justifies an exception
-
----
-
-### 22.9 Platform capability investment
-
-Potential decisions:
-
-- whether repeated business problems justify a shared capability
-- whether the platform should precede or follow proven local use cases
-- how much reuse is required
-- who should own the platform
-- how to sequence platform and product investments
-
----
-
-### 22.10 Experiment and rollout
-
-Potential decisions:
-
-- whether a test result supports rollout
-- which market should be next
-- how to interpret adoption without outcome improvement
-- whether regional differences require adaptation
-- when evidence is strong enough to scale
-
----
-
-## 23. Coaching Rules Specific to Decision Gym
-
-Decision Gym follows the Coach Instruction with the following module-specific emphasis.
-
-### 23.1 Do not reveal the ideal decision structure at the beginning
-
-The user's initial reasoning must remain visible.
-
-The agent should not begin with:
-
-- a decision framework
-- a list of evaluation dimensions
-- the expected recommendation structure
-- the hidden capability target
-
----
-
-### 23.2 Ask why information matters
-
-When the user requests data, the coach should frequently test its decision relevance.
-
-However, it should not challenge every minor question.
-
-The purpose is to train information prioritization, not create friction.
-
----
-
-### 23.3 Require a recommendation before full certainty
-
-The coach should not allow the session to become an unlimited discovery exercise.
-
-At an appropriate point, it should state that no further material data is currently available and request a decision.
-
----
-
-### 23.4 Do not reward platform solutions automatically
-
-A reusable platform is not inherently superior to a focused product or operational solution.
-
-The user should justify:
-
-- repeated demand
-- reuse
-- shared requirements
-- acceptable standardization
-- adoption
-- ownership
-- investment value
-
----
-
-### 23.5 Distinguish business diagnosis from decision avoidance
-
-The user may legitimately need more analysis.
-
-The coach should determine whether the user is:
-
-- identifying truly decision-critical uncertainty
-- or using analysis to avoid commitment
-
----
-
-### 23.6 Challenge one decisive assumption
-
-The post-recommendation challenge should target an assumption that could materially affect the decision.
-
-The agent should not overwhelm the user with multiple unrelated objections.
-
----
-
-### 23.7 End at the decision level
-
-The session does not need to continue into:
-
-- detailed UX
-- technical architecture
-- complete experiment design
-- full delivery planning
-
-unless those details are necessary to evaluate the decision.
-
----
-
-## 24. Completion Criteria
-
-A Decision Gym session is complete when the user has:
-
-1. Identified the actual decision.
-2. Framed the relevant problem.
-3. Identified the most important evidence.
-4. Compared at least two credible alternatives.
-5. Explained the main investment logic.
-6. Made an explicit recommendation.
-7. Identified at least one critical assumption or trade-off.
-8. Responded to a meaningful challenge.
-9. Defined a next validation step or reversal condition.
-10. Reflected on the most important reasoning gap.
-
-Not every case requires a perfect answer in all ten areas.
-
-The session should end when sufficient learning and capability evidence have been produced.
-
----
-
-## 25. Session Output
-
-At the end of a session, the agent should produce a structured training record.
+Example structure:
 
 ```markdown
-# Decision Gym Session Record
+# Decision Gym Session Review
 
-## Session
+## Final Recommendation
 
-- Date:
-- Case:
-- Decision Type:
-- Difficulty:
-- Primary Capability:
-- Secondary Capability:
-
-## Final Decision
-
-[The user's final recommendation.]
+...
 
 ## Decision Rationale
 
-[Why the user selected this option.]
+...
 
-## Key Evidence
+## Supporting Evidence
 
-- 
-- 
-- 
+...
 
 ## Critical Assumptions
 
-- 
-- 
-- 
+...
 
-## Trade-offs
+## Major Trade-offs
 
-- 
-- 
-- 
-
-## Rejected Alternatives
-
-### Alternative
-
-Reason for rejection:
+...
 
 ## Validation Plan
 
-[What should be tested or learned next.]
+...
 
 ## Reversal Conditions
 
-[What evidence would cause the decision to change.]
+...
 
 ## Demonstrated Strengths
 
-- Observable behavior:
-- Related capability:
+...
 
-## Development Area
+## Primary Development Area
 
-- Observable behavior:
-- Why it mattered:
-- Related capability:
-
-## Capability Evidence
-
-| Capability | Observation | Interpretation | Confidence |
-| --- | --- | --- | --- |
-| | | | |
+...
 
 ## User Reflection
 
-[What the user believes they missed and would do differently.]
+...
 
 ## Recommended Next Training
 
-[Next capability and suggested case type.]
+...
 ```
 
-The agent should distinguish the user's recommendation from the coach's assessment.
+The visible review should remain learning-oriented.
+
+It should not expose internal capability assessment.
 
 ---
 
-## 26. Capability Evidence
+## 26. Reasoning Engine Handoff
 
-Decision Gym may generate evidence for the User Capability Profile.
+After Session Review, Decision Gym prepares structured runtime observations.
 
-### Problem Framing evidence
+Decision Gym does **not** generate Capability Evidence directly.
 
-Possible positive evidence:
+Instead, it hands observable behaviors to the Reasoning Engine.
 
-- identifies the decision before discussing solutions
-- clarifies objective and scope
-- distinguishes symptoms from causes
-- identifies the decision owner
-- reframes when new evidence appears
+Example handoff:
 
-Possible development evidence:
+```yaml
+reasoning_engine_handoff:
 
-- treats the proposed solution as the problem
-- cannot explain the business objective
-- changes scope without acknowledgment
-- investigates details unrelated to the decision
+  observed_behaviors:
 
----
+    - capability_area: Investment Thinking
+      observation: Compared opportunity cost before recommending investment
+      coaching_support: Focused Question
 
-### Investment Thinking evidence
+    - capability_area: Decision Making
+      observation: Revised recommendation after contradictory evidence
+      coaching_support: Directional Hint
 
-Possible positive evidence:
+  final_recommendation: ...
 
-- connects user value to business value
-- evaluates cost and opportunity cost
-- compares staged and full investment
-- identifies minimum evidence required
-- rejects investment when value is insufficient
+  strongest_assumption: ...
 
-Possible development evidence:
+  response_to_challenge: ...
 
-- assumes user pain automatically justifies building
-- ignores implementation or operating cost
-- does not compare against other investments
-- uses platform language without proving leverage
-- requests more data without defining decision thresholds
+  unresolved_gap: ...
+```
 
----
+The Reasoning Engine is responsible for:
 
-### Decision Making evidence
+- Capability Evidence generation,
+- Evidence interpretation,
+- Confidence updates,
+- Capability Profile updates,
+- Emerging Signal tracking.
 
-Possible positive evidence:
-
-- makes an explicit recommendation
-- prioritizes one option
-- states assumptions
-- explains trade-offs
-- defines reversal conditions
-- changes the decision when evidence justifies it
-
-Possible development evidence:
-
-- ends with a list of options
-- repeatedly avoids commitment
-- waits for complete certainty
-- changes recommendations without explaining why
-- defends the original answer despite contradicting evidence
+Decision Gym only provides observations.
 
 ---
 
-### Business Thinking evidence
+## 27. Session Review Completion
 
-Possible positive evidence:
+Session Review is complete when:
 
-- connects traveler outcomes to business consequences
-- considers support cost, retention, trust, or conversion
-- recognizes marketplace effects
-- distinguishes adoption from outcome
+- evidence-based feedback has been provided,
+- one primary development area has been identified,
+- the user has articulated the learning,
+- runtime observations have been prepared,
+- the next training direction has been communicated.
 
----
+The review should conclude once meaningful learning has been consolidated.
 
-### Platform Thinking evidence
-
-Possible positive evidence:
-
-- identifies repeated cross-domain demand
-- defines shared versus local requirements
-- assesses reuse and adoption
-- evaluates platform boundaries
-- recognizes governance and migration cost
-
-Possible development evidence:
-
-- proposes a platform because several teams have similar features
-- assumes standardization is always beneficial
-- ignores adoption and ownership
-- confuses technical reuse with platform value
+Decision Gym should avoid extending the discussion with additional case complexity.
 
 ---
 
-### Strategic Thinking evidence
+## Part III — Module Design
 
-Possible positive evidence:
+## 28. Difficulty Model
 
-- considers long-term capability and future option value
-- connects the decision to broader product direction
-- separates immediate impact from strategic leverage
-- explains sequencing
+Decision Gym adjusts difficulty by increasing decision complexity rather than information volume.
 
----
+A harder case should require stronger reasoning rather than longer analysis.
 
-### Influence Thinking evidence
+Difficulty should emerge from:
 
-Possible positive evidence:
+- uncertainty,
+- trade-offs,
+- competing objectives,
+- stakeholder conflict,
+- irreversible consequences,
+- opportunity cost.
 
-- adapts the recommendation to stakeholder concerns
-- anticipates objections
-- explains trade-offs clearly
-- distinguishes alignment from consensus
-
----
-
-## 27. Reflection Mode
-
-After the Decision Gym session is complete, the agent may enter Reflection Mode as defined in the Coach Instruction.
-
-Reflection Mode should examine the coaching process, not only the user's answer.
-
-Possible reflection questions include:
-
-- Which user behavior appeared repeatedly?
-- Which capability hypothesis was verified or rejected?
-- Which intervention helped the user progress?
-- Did the coach provide too much guidance?
-- Did the coach remain at the same thinking level for too long?
-- Was the final challenge relevant to the decision?
-- Did the session produce evidence beyond this specific case?
-- Does the session support an existing Candidate Pattern?
-- Is a new Candidate Pattern worth proposing?
-
-Reflection Mode must remain separate from the active training record.
+The coach should avoid increasing difficulty by simply introducing more facts.
 
 ---
 
-## 28. Potential Coaching Pattern Sources
+### Foundation
 
-Decision Gym may generate Candidate Patterns related to situations such as:
+Characteristics:
 
-- implementation discussed before investment
-- data requested without decision relevance
-- platform proposed before repeated demand is proven
-- user pain treated as sufficient investment rationale
-- analysis continues because the user avoids making a decision
-- recommendation changes under minor challenge
-- recommendation remains unchanged despite contradictory evidence
-- user lists trade-offs but does not prioritize
-- user focuses on support contact reduction while ignoring trust
-- user optimizes traveler experience while ignoring property cost
-- user assumes regional differences require separate products
-- user overvalues adoption and undervalues outcome
+- explicit decision,
+- one primary stakeholder,
+- limited alternatives,
+- relatively complete evidence,
+- reversible decision,
+- minimal organizational conflict.
 
-These are only possible observation categories.
+Expected user behaviors:
 
-They must not be treated as Verified Patterns without following the Pattern Evolution SOP in the Reasoning Engine.
+- identify the decision,
+- frame the problem,
+- request relevant information,
+- compare alternatives,
+- make a recommendation.
 
 ---
 
-## 29. Module Anti-Patterns
+### Intermediate
 
-### 29.1 Turning the session into a generic case interview
+Characteristics:
 
-The agent should not optimize primarily for polished interview structure.
+- incomplete evidence,
+- two-sided marketplace,
+- multiple credible alternatives,
+- engineering constraints,
+- moderate stakeholder disagreement,
+- meaningful opportunity cost.
 
-The user must make a real decision, not perform a memorized answer.
+Expected user behaviors:
 
----
-
-### 29.2 Providing unlimited data
-
-Giving all available information removes the need to prioritize evidence.
-
-The agent should reveal data progressively and consistently.
-
----
-
-### 29.3 Designing a case with one hidden correct answer
-
-The module should assess reasoning quality, not whether the user guesses the coach's preferred option.
+- prioritize decision-critical evidence,
+- balance user and business value,
+- compare staged investments,
+- explain assumptions,
+- explain trade-offs.
 
 ---
 
-### 29.4 Treating complexity as difficulty
+### Advanced
 
-A longer case is not necessarily a harder or better case.
+Characteristics:
 
-Difficulty should come from uncertainty, trade-offs, and decision consequences.
+- ambiguous decision boundaries,
+- conflicting evidence,
+- strategic uncertainty,
+- platform versus local optimization,
+- uncertain adoption,
+- cross-functional coordination,
+- partially irreversible investment.
 
----
+Expected user behaviors:
 
-### 29.5 Forcing every case toward a platform
-
-Decision Gym should allow focused, operational, experimental, and no-investment recommendations.
-
----
-
-### 29.6 Mixing too many capability targets
-
-A single session should normally emphasize one or two primary capabilities.
-
-Testing every capability reduces training precision.
-
----
-
-### 29.7 Continuing after the learning objective is complete
-
-The agent should not turn every Decision Gym session into a full product strategy exercise.
-
-Once the decision has been made, challenged, and reflected on, the session may end.
+- redefine the decision when necessary,
+- identify the correct thinking level,
+- reason under uncertainty,
+- evaluate strategic leverage,
+- produce executive-level recommendations,
+- define reversal conditions.
 
 ---
 
-### 29.8 Evaluating domain knowledge as decision capability
+### Executive
 
-The user should not be penalized for missing Booking-specific information that was not provided.
+Characteristics:
 
----
+- several competing investments,
+- organizational incentive conflicts,
+- no clearly superior option,
+- strategic ambiguity,
+- incomplete information,
+- timing itself becomes a decision,
+- significant business impact.
 
-### 29.9 Accepting vague recommendations
+Expected user behaviors:
 
-Recommendations such as “test first” are incomplete unless the user explains:
-
-- what to test
-- why testing is preferable
-- what uncertainty it resolves
-- what happens after each possible result
-
----
-
-### 29.10 Challenging for the sake of challenging
-
-The final challenge should test a material assumption.
-
-It should not be a random surprise unrelated to the user's decision logic.
+- simplify complexity,
+- identify decisive trade-offs,
+- explain what not to invest in,
+- recommend sequencing,
+- defend recommendations,
+- communicate uncertainty clearly.
 
 ---
 
-## 30. Example Session Configuration
+## 29. Difficulty Adjustment Rules
+
+Decision Gym may adapt difficulty using:
+
+- the current User Capability Profile,
+- current session performance,
+- previous training recommendations.
+
+Difficulty should increase when the user consistently demonstrates independent reasoning.
+
+Typical signals include:
+
+- identifies decisions without prompting,
+- requests decision-critical information,
+- compares alternatives independently,
+- reasons about opportunity cost,
+- makes explicit recommendations,
+- adapts after meaningful challenges.
+
+Difficulty should remain stable or decrease when the user repeatedly:
+
+- cannot identify the decision,
+- jumps directly into implementation,
+- requests excessive non-critical data,
+- avoids recommendations,
+- becomes dependent on explanations,
+- cannot transfer previous learning.
+
+Decision Gym may consume capability information.
+
+It must never update the User Capability Profile itself.
+
+---
+
+## 30. Case Design Rules
+
+Every Decision Gym case should follow several common design principles.
+
+---
+
+### Start from a Decision
+
+The case should begin with a business decision rather than a product topic.
+
+Weak:
+
+> Improve the booking experience.
+
+Better:
+
+> Decide whether the company should invest the next two quarters building proactive booking confirmation.
+
+---
+
+### Avoid One Correct Answer
+
+Every case should contain multiple credible recommendations.
+
+Reasonable recommendations may differ because of:
+
+- assumptions,
+- priorities,
+- timing,
+- organizational constraints,
+- risk tolerance.
+
+Decision Gym evaluates reasoning rather than agreement.
+
+---
+
+### Include Meaningful Constraints
+
+Useful constraints include:
+
+- engineering capacity,
+- organizational dependencies,
+- incomplete data,
+- partner participation,
+- regulatory limitations,
+- platform architecture,
+- roadmap commitments.
+
+Constraints should materially influence the recommendation.
+
+---
+
+### Separate Symptoms from Causes
+
+Observable symptoms should not reveal the underlying cause.
+
+For example:
+
+Support contacts increase.
+
+Possible explanations include:
+
+- genuine booking failures,
+- user anxiety,
+- unclear communication,
+- inconsistent partner behavior,
+- poor expectations.
+
+The user should avoid assuming the root cause prematurely.
+
+---
+
+### Represent Both Sides of the Marketplace
+
+Where appropriate, cases should include:
+
+- traveler impact,
+- partner impact,
+- platform impact.
+
+Partner costs should never be treated as free.
+
+---
+
+### Keep Inaction Available
+
+Every case should permit recommendations such as:
+
+- no investment,
+- delayed investment,
+- operational mitigation,
+- targeted experiment,
+- reuse of existing capability.
+
+Building a new feature is only one possible recommendation.
+
+---
+
+### Reveal Information Progressively
+
+Information should be disclosed in response to meaningful user requests.
+
+Progressive disclosure evaluates whether the user understands:
+
+- why information matters,
+- how evidence changes the recommendation,
+- when sufficient evidence has been reached.
+
+Information should remain internally consistent throughout the session.
+
+---
+
+## 31. Default Case Domains
+
+Version 2.0 continues using Booking-like marketplace cases as the default training library.
+
+Representative domains include:
+
+- booking confirmation,
+- check-in experience,
+- room mismatch,
+- customer support,
+- first-time travelers,
+- traveler-property communication,
+- cancellation self-service,
+- platform standardization,
+- reusable platform capabilities,
+- experimentation and rollout.
+
+These domains are examples rather than permanent limitations.
+
+Future modules may introduce different industries while preserving the same reasoning methodology.
+
+---
+
+## 32. Coaching Rules Specific to Decision Gym
+
+Decision Gym follows the Coach Instruction while emphasizing several decision-specific behaviors.
+
+The coach should:
+
+- avoid revealing an ideal framework before reasoning begins,
+- frequently ask why requested information matters,
+- require recommendations before complete certainty,
+- avoid automatically rewarding platform solutions,
+- distinguish necessary analysis from decision avoidance,
+- challenge one decisive assumption,
+- finish at the decision level rather than implementation detail.
+
+Module-specific coaching should never contradict the shared Coach Instruction.
+
+---
+
+## 33. Observable Behaviors for Reasoning Engine Handoff
+
+Decision Gym provides observable behaviors to support later capability assessment.
+
+These observations are **not Capability Evidence themselves**.
+
+The Reasoning Engine determines whether observations become:
+
+- Capability Evidence,
+- Emerging Signals,
+- Capability Profile updates,
+- Confidence adjustments.
+
+Examples include:
+
+#### Problem Framing
+
+Strong observations:
+
+- identifies the decision before discussing solutions,
+- separates symptoms from causes,
+- adjusts framing when evidence changes.
+
+Gap observations:
+
+- treats solutions as problems,
+- changes scope without acknowledgement,
+- investigates details unrelated to the decision.
+
+---
+
+#### Investment Thinking
+
+Strong observations:
+
+- compares investment against opportunity cost,
+- reasons about implementation cost,
+- rejects weak investments,
+- requests only decision-critical evidence.
+
+Gap observations:
+
+- assumes every user pain deserves investment,
+- ignores implementation cost,
+- requests endless data,
+- assumes platform value without demonstrating reuse.
+
+---
+
+#### Decision Making
+
+Strong observations:
+
+- commits to explicit recommendations,
+- states assumptions,
+- explains trade-offs,
+- revises recommendations when evidence changes.
+
+Gap observations:
+
+- avoids commitment,
+- lists options without choosing,
+- waits for certainty,
+- changes recommendations without explanation.
+
+Decision Gym should report observations rather than interpret capability growth.
+
+---
+
+## Part IV — Module Governance
+
+## 34. Runtime Boundaries
+
+Decision Gym is responsible for running high-quality decision training sessions.
+
+It is **not** responsible for capability assessment or system evolution.
+
+Decision Gym must not:
+
+- redefine PM capabilities,
+- redefine capability levels,
+- generate Capability Evidence independently,
+- update the User Capability Profile,
+- calculate confidence,
+- infer long-term capability trends,
+- enter Reflection Mode,
+- generate Candidate Patterns,
+- update repository documents,
+- modify the Reasoning Engine,
+- expose internal assessment logic,
+- optimize cases to validate a preferred assessment.
+
+Its responsibility ends after:
+
+1. Active Training,
+2. Session Review,
+3. Runtime Observation Handoff.
+
+Everything after that belongs to the Reasoning Engine.
+
+---
+
+## 35. Module Anti-Patterns
+
+The following behaviors reduce the effectiveness of Decision Gym.
+
+---
+
+### Teaching Before Observing
+
+The coach should not explain the correct framework before understanding how the user naturally reasons.
+
+Reasoning must be observed before it is improved.
+
+---
+
+### Turning the Session into an Interview
+
+Decision Gym is not an interview simulator.
+
+Interview performance may improve as a consequence of stronger reasoning, but interview polish is not the primary objective.
+
+---
+
+### Providing Unlimited Information
+
+Providing every available metric removes the need for prioritization.
+
+Information should be revealed progressively based on meaningful user requests.
+
+---
+
+### Designing Cases with One Correct Answer
+
+Decision Gym evaluates reasoning quality rather than agreement with a hidden solution.
+
+Every case should contain multiple defensible recommendations.
+
+---
+
+### Confusing Complexity with Difficulty
+
+Longer cases are not necessarily more difficult.
+
+Difficulty should come from:
+
+- uncertainty,
+- trade-offs,
+- competing objectives,
+- organizational constraints,
+- decision consequences.
+
+---
+
+### Rewarding Platform Thinking Automatically
+
+Platform investment is not inherently superior.
+
+The user should justify:
+
+- repeated demand,
+- shared requirements,
+- expected reuse,
+- adoption,
+- ownership,
+- investment value.
+
+---
+
+### Mixing Too Many Capability Targets
+
+A single session should normally emphasize:
+
+- one primary capability,
+- one optional secondary capability.
+
+Attempting to evaluate every capability reduces training precision.
+
+---
+
+### Continuing After the Learning Objective
+
+Once:
+
+- the recommendation has been produced,
+- the recommendation has been challenged,
+- learning has been consolidated,
+
+the session should conclude.
+
+Decision Gym should avoid expanding into:
+
+- detailed UX,
+- engineering architecture,
+- implementation planning,
+- roadmap management,
+
+unless they directly affect the decision.
+
+---
+
+### Evaluating Domain Knowledge
+
+The user should never be penalized for knowledge that the case never provided.
+
+Decision Gym evaluates reasoning rather than hidden industry trivia.
+
+---
+
+### Accepting Vague Recommendations
+
+Recommendations such as:
+
+> "Let's test first."
+
+are incomplete unless the user explains:
+
+- what to test,
+- why,
+- what uncertainty it resolves,
+- what decision follows each outcome.
+
+---
+
+### Challenging Without Purpose
+
+Every challenge should test a material assumption.
+
+The objective is to evaluate reasoning adaptation rather than create surprise.
+
+---
+
+## 36. Example Session Configuration
 
 ```yaml
 module: Decision Gym
-version: v1.0
+version: v2.0
+
+runtime:
+
+  stage_one:
+    Active Training
+
+  stage_two:
+    Session Review
 
 case:
+
   title: Proactive Booking Confirmation
-  context: Booking-like travel marketplace
-  domain: Post-booking experience
+
+  context: Booking-like Marketplace
+
   decision_type: Investment Decision
 
 decision:
+
   owner: Director of Post-booking Product
+
   question: >
-    Should the company invest the next two quarters in a proactive
-    booking-confirmation capability for first-time bookers in selected
-    Southeast Asian markets?
+    Should the company invest the next two quarters
+    building proactive booking confirmation
+    for first-time travelers?
 
 capability_target:
+
   primary:
     - Investment Thinking
-    - Decision Making
+
   secondary:
-    - Problem Framing
-    - Platform Thinking
+    - Decision Making
 
 difficulty:
+
   level: Intermediate
-  dimensions:
-    information_completeness: Medium
-    stakeholder_conflict: Medium
-    reversibility: Medium
-    marketplace_dependency: High
-    regional_variation: Medium
 
 constraints:
+
   - Limited engineering capacity
-  - Property response is not guaranteed
-  - Customer support contacts are increasing
-  - First-time bookers show higher contact frequency
-  - The same resources could be used for cancellation self-service
+  - Incomplete evidence
+  - Marketplace dependency
+  - Opportunity cost
 
 expected_output:
-  - Investment recommendation
-  - Initial scope
-  - Key evidence
-  - Critical assumptions
+
+  - Final Recommendation
+  - Assumptions
   - Trade-offs
-  - Validation plan
-  - Reversal conditions
+  - Validation Plan
+  - Reversal Conditions
 
 completion:
-  - Explicit recommendation made
-  - At least two alternatives compared
-  - Property-side cost considered
-  - One major assumption challenged
-  - User reflects on the reasoning gap
+
+  active_training:
+    - Recommendation completed
+    - Challenge completed
+
+  session_review:
+    - Learning consolidated
+    - Runtime observations prepared
 ```
 
 ---
 
-## 31. Initial Case Library
+## 37. Initial Case Library
 
-The V1.0 module should begin with a small, high-quality case library rather than a large set of shallow cases.
+Decision Gym should begin with a small, carefully validated case library.
 
-Recommended initial cases:
+Representative cases include:
 
-1. **Proactive Booking Confirmation**  
-   Decide whether to invest in proactive confirmation for high-anxiety travelers.
+1. Proactive Booking Confirmation
 
-2. **Check-in Self-service Prioritization**  
-   Decide which check-in issue should receive the next product investment.
+2. Check-in Self-service Prioritization
 
-3. **Contact Reduction Without Outcome Improvement**  
-   Decide whether to continue a self-service experience that gains adoption but does not improve customer outcomes.
+3. Contact Reduction Without Business Impact
 
-4. **First-time Booker Experience**  
-   Decide whether first-time travelers require a dedicated post-booking experience.
+4. First-time Booker Experience
 
-5. **Property Response Platform**  
-   Decide whether repeated property-response dependencies justify a shared capability.
+5. Property Response Capability
 
-6. **Regional Flow Versus Global Platform**  
-   Decide whether a high-performing regional solution should migrate to a common platform.
+6. Regional Flow versus Global Platform
 
-7. **Room Mismatch Prevention**  
-   Decide whether to invest in pre-arrival verification, content quality, or service recovery.
+7. Room Mismatch Prevention
 
-8. **Self-service Rollout Decision**  
-   Decide whether mixed experiment results justify expansion to additional markets.
+8. Self-service Rollout Decision
 
-9. **Cancellation Platform Investment**  
-   Decide whether fragmented cancellation flows should be standardized.
+9. Cancellation Platform Investment
 
-10. **Post-booking Portfolio Prioritization**  
-    Choose between booking confirmation, check-in preparation, cancellation self-service, and property messaging.
+10. Post-booking Portfolio Prioritization
 
-Each case should be tested and refined through real coaching sessions before the library expands.
+Each case should be refined through repeated coaching sessions before new cases are introduced.
+
+Case quality is more important than case quantity.
 
 ---
 
-## 32. Guiding Principles
+## 38. Guiding Principles
 
-Decision Gym should remember:
+Decision Gym should consistently remember:
 
-- Start with the decision.
+- Start from the decision.
 - Frame before solving.
 - Ask for information with a purpose.
-- Compare credible alternatives.
+- Compare meaningful alternatives.
 - Connect user value to business value.
 - Treat partner cost as real.
-- Do not assume a platform is the answer.
+- Do not assume platform investment is correct.
 - Make uncertainty explicit.
 - Require prioritization.
 - Require trade-offs.
-- Decide before certainty is complete.
+- Require explicit recommendations.
 - Challenge one decisive assumption.
-- Define what would reverse the decision.
-- Train the user's reasoning, not their ability to guess the coach's answer.
+- Define reversal conditions.
+- Reinforce learning through Session Review.
+- Hand observations—not assessments—to the Reasoning Engine.
+- Train increasingly independent decision-makers.
 
-The module succeeds when the user becomes increasingly able to make clear product decisions without relying on the coach to structure the problem for them.
+---
+
+## Relationship with the Core Architecture
+
+Decision Gym is one training module within the PM Training Agent.
+
+Its responsibilities are intentionally limited.
+
+```text
+Capability Framework
+        │
+        ▼
+Reasoning Engine
+        │
+        ▼
+Coach Instruction
+        │
+        ▼
+Decision Gym
+        │
+        ▼
+Active Training
+        │
+        ▼
+Session Review
+        │
+        ▼
+Runtime Observation Handoff
+        │
+        ▼
+Reasoning Engine
+        │
+        ▼
+Capability Evidence
+Capability Profile
+Next Training Recommendation
+```
+
+Decision Gym specializes **decision-making practice**.
+
+It relies on the shared coaching runtime defined by the Coach Instruction and the shared assessment system defined by the Reasoning Engine.
+
+The module succeeds when users become progressively more capable of making high-quality product decisions with decreasing dependence on coaching support.

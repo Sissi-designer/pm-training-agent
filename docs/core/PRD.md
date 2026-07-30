@@ -1,287 +1,453 @@
-# PM Training Agent PRD v1.0
+# PM Training Agent PRD v2.0
 
-## 1. Product Overview
+---
 
-### 1.1 Product Name
+# 1. Product Overview
 
-PM-Training-Agent
+## 1.1 Product Name
 
-### 1.2 Product Vision
+PM Training Agent
 
-Help experienced product managers build executive-level product thinking through deliberate practice in real business decision-making.
+## 1.2 Product Vision
 
-帮助拥有一定项目经验的产品经理，通过真实商业场景的刻意训练，建立平台战略、商业决策和长期规划能力。
+Help experienced product managers build senior- and executive-level product thinking through deliberate practice in realistic business situations.
 
-## 2. Background
+帮助拥有一定项目经验的产品经理，通过真实商业场景下的持续训练，建立更加成熟的问题分析、商业判断、资源分配、平台战略和影响力能力。
 
-越来越多3-6年产品经理已经能够：
+PM Training Agent 的目标不是帮助用户完成某一道题，而是帮助用户长期提升产品能力。
+
+---
+
+# 2. Background
+
+拥有 3–8 年经验的产品经理通常已经能够：
 
 - 独立负责产品模块
 - 推动跨团队合作
-- 进行数据分析
-- 完成PRD设计
+- 完成产品设计与交付
+- 使用数据分析问题
 
-但是当成长到Senior PM / Platform PM时，最大的Gap已经不是产品技能，而是如何面对一个没有标准答案的商业问题，并最终做出正确的产品决策。
+但随着成长到 Senior PM、Platform PM、Lead PM，真正的挑战逐渐发生变化。
 
-典型表现：
+他们需要面对的是：
 
-- 不知道如何开始分析一个模糊问题
-- 容易直接进入Solution，而没有先定义Problem
-- 能分析很多数据，但无法形成Recommendation
-- 能理解Leader为什么这么决策，但自己无法独立做出类似决策
-- 缺乏平台战略、长期规划和资源分配经验
+- 没有标准答案的问题
+- 信息不完整的商业决策
+- 多个合理方案之间的取舍
+- 长短期利益平衡
+- 资源有限下的优先级判断
+- 与不同 Stakeholder 建立共识
 
-目前市面上的AI产品主要提供：
+这些能力很难通过课程或阅读获得，更需要长期、高质量的刻意训练。
 
-- Product知识
-- Interview练习
-- PRD生成
-- AI问答
+当前大多数 AI 产品主要提供：
 
-但没有任何产品能真正帮助PM系统训练产品能力以突破产品经理的不同职业阶段。我们希望创建一个PM训练agent，通过模拟不同职业阶段所需处理的问题，不断锻炼PM向更高level的思考模式进步，并通过科学的职业阶段划分和case study打分，帮助PM了解目前所处阶段、距离下一阶段核心欠缺的能力、近期训练效果。
+- AI 问答
+- 产品知识
+- 面试练习
+- PRD 生成
 
-## 3. Product Positioning
+但缺少一个真正帮助 PM 持续训练产品思维能力的产品。
 
-PM-Training-Agent 是一个 AI PM Capability Coach。
+PM Training Agent 希望成为这样的长期成长伙伴。
 
-它不是课程，不是知识库，不是AI问答。
+---
 
-而是一位每天陪用户训练商业决策、资源分配、长期战略规划、协同合作方能力的AI教练。
+# 3. Product Positioning
 
-## 4. Target Users
+PM Training Agent 是一个 AI Product Capability Coach。
 
-工作3-6年的产品经理。典型画像：
+它不是：
 
-- 已拥有能力：做过完整项目、能分析数据、会做产品设计、能回答Why
-- 希望提升：platform thinking, strategy thinking, business decision, investment thinking, long-term planning
-- 核心痛点：知道别人决策原因。但是轮到自己不知道如何开始思考。
+- 产品课程
+- AI 搜索
+- PRD 写作工具
+- 面试模拟器
 
-## 5. Product Value Proposition
+而是一套持续训练产品思维的 AI 教练系统。
 
-Build Product Capability through deliberate practice.
-The product continuously observes, evaluates and develops the user's capability profile rather than optimizing for individual case performance.
+系统通过不同训练 Agent，引导用户不断思考、挑战、修正，并持续记录能力成长。
 
-## 6. Core User Journey
+---
 
-Open agent → choose training topic → AI coaching → reflection → score → growth dashboard
+# 4. Target Users
 
-## 7. Product Information Architecture
+## Primary Users
 
-### 7.1 底部导航栏
+拥有约 3–8 年经验，希望进一步成长的产品经理。
 
-两个tab，tab1 coach，tab2 growth
+典型用户已经：
 
-### 7.2 Coach页面
+- 完整负责过产品项目
+- 具备基础商业分析能力
+- 能推动跨团队合作
+- 希望成长为 Senior PM、Platform PM 或更高阶段
 
-目前规划包含五个训练主题：Decision Gym, Executive Trade-off，Reverse Engineering, Strategy Lab, Stakeholder Simulation
+## Core Needs
 
-### 7.3 Growth 页面
+用户希望提升：
 
-展示产品阶段变迁、核心能力评分变化、决策历史
+- Problem Framing
+- Business Thinking
+- Decision Making
+- Investment Thinking
+- Platform Thinking
+- Strategic Thinking
+- Influence Thinking
 
-## 8. Coach Design
-Each coach is a training method.
-It does not represent an independent capability.
-All coaches contribute to the same Capability Framework with different primary training objectives.
+---
 
-### 8.1 Coach 1: Decision Gym
+# 5. Product Value
 
-#### 1. Goal
+PM Training Agent 提供长期、持续的产品能力训练，而不是一次性的答案。
 
-训练Problem Framing, Business Goal, Decision Making
+产品价值包括：
 
-#### 2. Input
+- Structured Practice
+- Adaptive Coaching
+- Capability Evaluation
+- Long-term Growth
 
-AI提供一个模糊商业问题。
+每一次训练都会帮助用户积累新的能力证据，并持续更新 Capability Profile。
 
-例如：
+---
 
-Booking customer support cost keeps increasing.
+# 6. Product Experience
 
-Should Booking invest in AI?
+产品包含两个核心体验：
 
-#### 3. AI Rules
+## Training
 
-- 不断追问Why? Why now? What assumptions? What alternatives?
-- 最多10轮, 用户必须输出Problem Definition, Business Goal, Alternative Solutions, Trade-off, Recommendation
+用户进入训练，与 AI Coach 完成一个完整 Session。
 
-### 8.2 Coach 2: Executive Trade-off
+## Review
 
-#### 1. Goal
+训练结束后，帮助用户总结本次学习内容，更新 Capability Profile，并推荐下一步训练。
 
-训练资源分配能力。
+---
 
-#### 2. Input
+# 7. Training
 
-AI提供典型问题：资源有限, 预算有限, 优先级冲突。
+用户首先选择一个 Training Agent。
 
-例如：多个项目AI Review, Identity, Payment, Search，但资源只能做两个。应该怎么选择，为什么？
+每个 Agent 是一种不同的训练方式，而不是一种能力。
 
-#### 3．AI Rules
+所有 Agent 最终都会更新同一份 Capability Profile。
 
-训练：Investment Thinking, Portfolio Thinking, Priority, ROI, Long-term Value
+## MVP
 
-### 8.3 Coach 3: Reverse Engineering
+- Decision Gym
+- Strategy Lab
+- Executive Trade-off
 
-#### 1. Goal
+## V2
 
-推理真实产品背后的商业决策。
+- Reverse Engineering
+- Stakeholder Simulation
 
-#### 2. Input
+---
 
-真实公司，真实产品，逐步释放背景。
+# 8. Training Agents
 
-例如：Booking Genius, Airbnb Categories, Amazon Prime
+## Decision Gym
 
-#### 3. AI Rules
+### Purpose
 
-用户不断推理：Business Problem, Alternative, Trade-off, 最终Decision。
+Train product decision making under ambiguity.
 
-AI最后公布：真实商业逻辑。
+### Primary Capabilities
 
-### 8.4 Coach 4: Strategy Lab
+- Problem Framing
+- Decision Making
+- Investment Thinking
 
-#### 1. Goal
+### Input
 
-训练长期战略规划能力。
+A realistic business decision with incomplete information.
 
-#### 2.Input
+### Output
 
-例如：
-
-You are Head of Booking Self-service Platform. Create 3 Month Plan, 1 Year Strategy, 3 Year Vision
-
-#### 3. AI Rules
-
-AI不断Challenge：Why? Priority? Risk? MVP? Success Metrics?
-
-### 8.5 Coach 5: Stakeholder Simulation
-
-#### 1. Goal
-
-训练Influence能力。
-
-#### 2. Input
-
-针对之前coach1,2,3下的方案，训练将方案向不同stakeholder sell的能力
-
-AI分别扮演：Business, Engineering, Finance, Legal, Leadership
-
-#### 3. AI rules
-
-不断Challenge Proposal, 最终训练：Communication, Alignment, Influence
-
-## 9. AI Coaching Principles
-
-Agent永远遵守：
-
-**Principle 1:** Don't Teach First, 永远先Challenge, 不要直接告诉答案。
-
-**Principle 2:** Challenge Assumptions. 不断问：Why? Why now? Why not?
-
-**Principle 3:** Correction Instead of Answer. 用户偏离方向,及时纠偏,不给完整答案。
-
-**Principle 4:** Decision Required. 最后必须输出Recommendation。不能：Need more data. 不能：It depends.
-
-## 10. Reflection & Evaluation
-
-### 1. 训练结束自动进入Reflection
-After each session, the agent updates the user's Capability Profile.
-
-Evaluation includes:
-- Current Level
-- Confidence
-- Supporting Evidence
+- Final Recommendation
+- Decision Rationale
+- Capability Evidence
 - Recommended Next Training
 
-具体能力项和能力阶段参考 [Capability Framework](capability-framework.md)
+---
 
-### 2. Agent自动生成Biggest Blind Spot
+## Strategy Lab
+
+### Purpose
+
+Train long-term strategic thinking.
+
+### Primary Capabilities
+
+- Strategic Thinking
+- Platform Thinking
+- Business Thinking
+
+### Input
+
+A strategic product challenge.
+
+### Output
+
+- Strategy
+- Roadmap
+- Key Assumptions
+- Capability Evidence
+- Recommended Next Training
+
+---
+
+## Executive Trade-off
+
+### Purpose
+
+Train resource allocation and prioritization.
+
+### Primary Capabilities
+
+- Investment Thinking
+- Decision Making
+- Strategic Thinking
+
+### Input
+
+Multiple competing investment opportunities under limited resources.
+
+### Output
+
+- Investment Decision
+- Trade-offs
+- Opportunity Cost
+- Capability Evidence
+- Recommended Next Training
+
+---
+
+## Reverse Engineering (V2)
+
+### Purpose
+
+Infer the business reasoning behind real product decisions.
+
+---
+
+## Stakeholder Simulation (V2)
+
+### Purpose
+
+Train communication, alignment and influence across stakeholders.
+
+---
+
+# 9. Training Session
+
+All Training Agents follow the same high-level session flow.
+
+```text
+Start Session
+
+↓
+
+Coach Conversation
+
+↓
+
+Final Recommendation
+
+↓
+
+Session Complete
+
+↓
+
+Reflection
+
+↓
+
+Capability Profile Update
+
+↓
+
+Choose Next Action
+```
+
+Session 结束时，系统会明确告知用户：
+
+```
+✓ Session Complete
+
+Decision Gym
+
+Capability Updated
+```
+
+然后进入 Review。
+
+---
+
+# 10. Review
+
+Review 是训练结束后的学习阶段。
+
+包括三个部分。
+
+## 10.1 Reflection
+
+Coach 提出一个 Closing Question，引导用户总结本次训练。
 
 例如：
 
-You jumped into solution before defining the business problem.
+- What changed most during today's discussion?
+- Which assumption proved to be incorrect?
+- What would you do differently next time?
 
-### 3. If I Were The PM
+Reflection 直接在聊天中完成，不需要单独页面。
 
-Agent给出参考回答。不是标准答案。
+---
 
-而是一种更成熟的Decision Framework。
+## 10.2 Capability Profile
 
-## 11. Growth Dashboard
+Reflection 完成后，系统更新 Capability Profile。
 
-### 1.Overall Level
+用户可以查看：
 
-Feature PM → Business PM → Platform PM → Strategy PM
+- Current Capability Levels
+- Recent Progress
+- Coach Observations
+- Recommended Next Training
 
-Overall Level is inferred from the Capability Profile.
-It is not calculated by averaging scores. Each level follows the combination of mature capabilities below:
-| Overall Level | Required Capability                                     |
-| ------------- | ------------------------------------------------------- |
-| Feature PM    | Problem Framing Stable                                  |
-| Business PM   | + Business Thinking Stable                              |
-| Platform PM   | + Investment Thinking Stable + Platform Thinking Stable |
-| Strategy PM   | All capabilities Stable, with at least two Advanced     |
+系统内部使用的推理过程、置信度和中间判断不会展示给用户。
 
+---
 
-### 2. Capability Profile
+## 10.3 Coach Reference
 
-记录所有训练。展示每个能力项当前所处level，目前正在经历的成长趋势。结构为capability,level,trend
+用户可以主动查看 Coach 的参考思路。
 
+Reference Response 不是标准答案，而是一种更成熟的产品思考方式。
 
-### 3. Summary
-基于历史训练记录和capability profile的更新，给出总结。参考格式：
-今天我观察到了 3 个新的行为证据，因此将你的 Platform Thinking 从 Emerging 提升为 Stable；Investment Thinking 仍保持 Emerging，因为在两个不同场景下，你都没有主动讨论 Opportunity Cost。下一次建议进入 Executive Trade-off 继续训练。
+该内容按需查看，不作为训练流程的必经步骤。
 
+---
 
-## 12. AI Architecture
+# 11. Capability Profile
 
-Agent包含四层身份：
+Capability Profile 是用户长期成长记录。
 
-**Hiring Manager：** 训练Why。
+每次 Session 都会更新相关能力。
 
-**Manager：** 训练Decision。
+每项能力包括：
 
-**Director：** 训练Investment。
+- Current Level
+- Supporting Evidence
+- Recent Trend
+- Coach Observations
+- Recommended Next Training
 
-**VP：** 训练Strategy。
+能力不会因为一次训练立即发生变化。
 
-AI根据用户能力自动切换Challenge深度。
+系统更关注长期行为模式，而不是单次表现。
 
-## 13. Milestone
+---
 
-### 1. MVP
+# 12. Reflection Mode
 
-Including: Decision Gym, Executive Trade-off, Reflection, Score, Growth Dashboard
+Reflection Mode 是系统内部能力。
 
-### 2. Phase 2
+它不会直接面向用户。
 
-Newly add: Strategy Lab, Stakeholder Simulation, Reverse Engineering
+每次训练结束后，Reflection Mode 会：
 
-### 3. Phase 3
+- Review Coaching Quality
+- Identify User Thinking Patterns
+- Accumulate Candidate Patterns
+- Improve Future Coaching
 
-Newly add: Voice Coaching, 真实公司Case Library, 上传PRD进行Challenge, AI模拟Leadership Meeting
+Reflection Mode 不会自动修改 Capability Framework。
 
-## 14. Success Metrics
+---
 
-### 用户层
+# 13. Roadmap
 
-- 7-Day Retention
-- Daily Training Completion Rate
+## MVP
+
+验证核心训练闭环。
+
+包含：
+
+- Decision Gym
+- Strategy Lab
+- Executive Trade-off
+- Capability Profile
+- Reflection
+- Coach Reference
+
+重点验证：
+
+- 用户是否愿意持续训练
+- Agent 是否真正起到 Coaching 作用
+- Capability Profile 是否能够正确记录成长
+
+---
+
+## V2
+
+扩展训练场景。
+
+新增：
+
+- Reverse Engineering
+- Stakeholder Simulation
+- Cross-agent Learning
+- Richer Case Library
+
+---
+
+## V3
+
+打造长期成长平台。
+
+新增：
+
+- Growth Workspace
+- Capability Timeline
+- Personalized Learning Path
+- Long-term Coaching Agent
+- Voice Coaching
+
+---
+
+# 14. Success Metrics
+
+## User
+
+- Session Completion Rate
 - Weekly Training Frequency
+- Retention
+- Cross-agent Usage
+
+## Coaching
+
+- Recommendation Completion Rate
 - Reflection Completion Rate
+- User Satisfaction
+- Coaching Effectiveness
 
-### AI层
+## Capability
 
-- 平均训练轮数
-- Challenge有效率
-- 用户Recommendation输出率
-- 用户满意度
+- Capability Evidence Coverage
+- Capability Growth
+- Repeated Blind Spot Reduction
 
-### 能力层
+---
 
-连续训练30天后：
+# 15. Product Principles
 
-- Problem Framing平均提升
-- Decision Making平均提升
-- Investment Thinking平均提升
+PM Training Agent exists to help users become better product managers without depending on AI.
+
+The product should train better thinking, not generate better answers.
+
+Every training session should strengthen the user's ability to frame problems, make decisions and lead products independently.
